@@ -7,6 +7,15 @@
 - `Extensions` - `Vim`을 설치한다([`Link`](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim))
 - `vim` 작동 여부는 에디터 하단에 `-- NORMAL --`에서 확인 가능하다
 - `Ctrl`+`Shift`+`P` - `Toggle Vim Mode`: Vim입력모드를 disable할 수 있다
+## 0.2 Vim 사용을 위한 Vscode 설정하기
+1. `vscode/setings.json` 만들기
+2. vscode-vim 설정하기
+  - `*p` 허용하기
+  ```json
+  {
+    "vim.useSystemClipboard": true
+  }
+  ```
 
 ## 1.0 기본 단축키
 ### 1.1 명령모드 vs. 입력모드
@@ -55,3 +64,18 @@
 | `L` | - | 현재 화면에서 맨끝 |
 | `gg` | `Ctrl`+`Home` | 파일 앞 |
 | `G` | `Ctrl`+`End` | 파일 끝 |
+#### 1.3.5 특정 내용을 검색하여 커서 이동하기
+- `/`과 검색할 내용을 입력하면 가장 가까운 첫 검색대상으로 이동한다 
+- 다음 검색어는 `n`을 눌러 이동한다
+### 1.4 커서블록이나 멀티커서 설정하기
+- `v`: 커서블록 시작하기
+  - `v` 누른 후 커서를 이동하면 블록이 설정된다
+  - `ESC`키 눌러 커서블록을 해제한다
+- `Ctrl`+`v`: 멀티커서 시작하기
+  - 시작한 후 위줄이나 아래줄로 이동하면 멀티커서가 생긴다
+### 1.5 명령모드에서 내용 수정하기
+- `x`: 커서 안 글자 삭제
+- `dd`: 문장 삭제
+- `yy`: 문장 복사
+- `p`: 붙여넣기
+- `*p`: 클립보드에서 붙여넣기
